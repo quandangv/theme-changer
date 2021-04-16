@@ -1,0 +1,55 @@
+# kakoune UI
+
+face global Default rgb:${fg:1},default
+face global PrimarySelection rgb:${sel.pri.fg:1},rgb:${sel.pri.bg:1}
+face global SecondarySelection rgb:${sel.sec.fg:1},rgb:${sel.sec.bg:1}
+face global PrimaryCursor rgb:${cursor.fg:1},rgb:${cursor.bg:1}+b
+face global SecondaryCursor rgb:${cursor.sec.fg:1},rgb:${cursor.sec.bg:1}+b
+
+face global MatchingChar default,rgb:ffffff
+face global Search @MatchingChar
+face global Whitespace @MatchingChar
+face global BufferPadding rgb:888888,default
+face global LineNumbers rgb:ffffff,default
+face global LineNumberCursor rgb:666666,default
+face global Error rgb:121212,rgb:ff4444
+
+face global MenuBackground rgb:ffffff,rgb:${accent.light:1}@Default
+face global MenuForeground rgb:ffffff,rgb:${accent.lighter:1}+ub@MenuBackground
+face global MenuInfo  rgba:FFFFFF11+i
+face global Information rgb:FFFFFF,rgb:${accent.lighter:1}
+face global StatusLine rgb:EEEEEE,rgb:${accent:1}
+face global StatusLineMode rgba:000000cc,rgb:${accent.light:1}+b
+face global StatusLineInfo default,default
+face global StatusLineValue default,default+b
+face global StatusCursor default,rgb:${accent.dark:1}
+face global Prompt rgb:ffffff,default+b
+
+# code
+
+face global value rgb:${green.light:1},default 
+face global string rgb:${green:1},default
+
+face global type rgb:${accent.darker:1},default+i
+face global keyword rgb:${accent.dark:1},default+bi
+face global attribute rgb:${accent.darker:1},default+i
+
+face global operator rgb:${accent.dark:1},default
+face global comment rgb:${teal.dark:1},default+i
+face global meta rgb:${teal:1},default
+
+face global identifier rgb:888888,default
+face global error default,rgb:ff7c5c
+
+# text
+
+face global title rgb:ffffff,default+b
+face global header rgb:ffffff,default
+face global bold rgb:ffffff,default+b
+face global italic rgb:ffffff,default+i
+face global mono rgb:000000,default
+face global block default,default@mono
+face global link rgb:ffffff,default
+face global bullet rgb:ffffff,default
+face global list rgb:ffffff,default
+

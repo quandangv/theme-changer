@@ -1,0 +1,55 @@
+wallpaper: '/home/quan/wallpapers/day/kurzgesagt-nuclear'
+
+color:$ color ${.base}
+  dark:$ color L-0.1 ${dep base}
+  darker:$ color cielch "L-0.2 C-0.2" ${dep base}
+  light:$ color L+0.1 ${dep base}
+  lighter:$ color L+0.2 ${dep base}
+
+fg: #320885
+  bold:$ color L-0.1 ${..}
+
+bg: rgba(186,250,255,0.8)
+
+cursor:$ .bg
+  bg:$ color L+0.15 ${fg}
+  fg:$ color L+0.4 ${..}
+  sec:$ .bg
+    bg:$ color L+0.15 ${cursor}
+    fg:$ color L+0.4 ${..}
+
+accent:$ clone color
+  base: #66c31b
+
+sel: 
+  pri: 
+    bg:$ green
+    fg:$ color L=0.15 ${dep bg}
+  sec: a
+    bg:$ teal
+    fg:$ color L=0.15 ${dep bg}
+
+red:$ clone color
+  base:$ color cielch c-0.1 #b24144
+
+green:$ clone color
+  base:$ color L-0.1 #60b719
+
+yellow:$ clone color
+  base: #887722
+
+blue:$ clone color
+  base:$ color cielch "L-0.35 H+60" #00c7d9
+
+purple:$ clone color
+  base: #7744BB
+
+teal:$ clone color
+  base: #007777
+
+border: 0
+
+yzb:
+  bg:$ red.light
+  bg2:$ teal.dark
+  fg2:$ red

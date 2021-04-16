@@ -1,0 +1,43 @@
+[options]
+clickable_url		= true
+search_wrap		= true
+font			= Source Code Pro Semibold
+
+[colors]
+foreground		= ${fg}
+foreground_bold 	= ${fg.bold}
+cursor          	= ${cursor.bg}
+cursor_foreground	= ${cursor.fg}
+# 16 color space
+# Black, Gray, Silver, White
+color0  = #000000
+color8  = #333333
+color7  = #cccccc
+color15 = #ffffff
+
+color1  = ${red.dark}
+color9  = ${red}
+
+color2  = ${green.dark}
+color10 = ${green}
+
+color3  = ${yellow.dark}
+color11 = ${yellow}
+
+color4  = ${blue.dark}
+color12 = ${blue}
+
+color5  = ${purple.dark}
+color13 = ${purple}
+
+color6  = ${teal.dark}
+color14 = ${teal}
+
+# Extra colors
+color16 = #aaaaaa
+color17 = #444444
+color18 = #121212
+color19 = #222222
+color20 = #999999
+color21 = #999999
+background = ${bg}

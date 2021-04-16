@@ -1,0 +1,55 @@
+wallpaper: '/home/quan/wallpapers/day/kurzgesagt'
+
+color:$ color ${.base}
+  dark:$ color L-0.15 ${dep base}
+  darker:$ color cielch "L-0.2 C-0.2" ${dep base}
+  light:$ color L+0.1 ${dep base}
+  lighter:$ color L+0.2 ${dep base}
+
+fg: #553322
+  bold: #553322
+
+bg: rgba(234,199,118,0.8)
+
+cursor:$ .bg
+  bg: #773322
+  fg:$ color L+0.4 ${..}
+  sec:$ .bg
+    bg:$ color L+0.15 ${cursor}
+    fg:$ color L+0.4 ${..}
+
+accent:$ clone color
+  base: #ee5577
+
+sel: 
+  pri: 
+    bg:$ teal
+    fg:$ color L=0.15 ${dep bg}
+  sec: a
+    bg:$ purple
+    fg:$ color L=0.15 ${dep bg}
+
+red:$ clone color
+  base: #ff3d3d
+
+green:$ clone color
+  base: #009900
+
+yellow:$ clone color
+  base: #EE8811
+
+blue:$ clone color
+  base: #4444CC
+
+purple:$ clone color
+  base: #8b289d
+
+teal:$ clone color
+  base: #009999
+
+border: 0
+
+yzb:
+  bg:$ yellow.light
+  bg2:$ purple.darker
+  fg2:$ yellow.lighter
