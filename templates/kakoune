@@ -27,7 +27,7 @@ face global Prompt rgb:ffffff,default+b
 
 # code
 
-face global value rgb:${green.light:1},default 
+face global value rgb:${green.dark:1},default 
 face global string rgb:${green:1},default
 
 face global type rgb:${accent.darker:1},default+i

@@ -11,35 +11,35 @@ fg: #320885
 
 bg: rgba(186,250,255,0.8)
 
-cursor:$ .bg
-  bg:$ color L+0.15 ${fg}
-  fg:$ color L+0.4 ${..}
-  sec:$ .bg
-    bg:$ color L+0.15 ${cursor}
-    fg:$ color L+0.4 ${..}
+cursor:$ fg
+  bg:$ color L+0.1 ${..}
+  fg:$ color L+0.4 ${dep bg}
+  sec:$ teal
+    bg:$ color L-0.1 ${..}
+    fg:$ color L+0.4 ${dep bg}
 
 accent:$ clone color
   base: #66c31b
 
 sel: 
   pri: 
-    bg:$ green
+    bg:$ blue.light
     fg:$ color L=0.15 ${dep bg}
   sec: a
-    bg:$ teal
+    bg:$ teal.light
     fg:$ color L=0.15 ${dep bg}
 
 red:$ clone color
   base:$ color cielch c-0.1 #b24144
 
 green:$ clone color
-  base:$ color L-0.1 #60b719
+  base:$ color L-0.2 #60b719
 
 yellow:$ clone color
   base: #887722
 
 blue:$ clone color
-  base:$ color cielch "L-0.35 H+60" #00c7d9
+  base:$ color cielch "L-0.15 C+0.2" #4898e8
 
 purple:$ clone color
   base: #7744BB
