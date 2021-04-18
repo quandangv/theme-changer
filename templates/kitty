@@ -4,6 +4,8 @@ italic_font      Source Code Pro SemiBold Italic
 bold_italic_font Source Code Pro Black Italic
 
 allow_remote_control yes
+dynamic_background_opacity yes
+
 cursor ${cursor.bg}
 cursor_text_color ${cursor.fg}
 foreground ${fg}

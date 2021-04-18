@@ -1,4 +1,4 @@
-wallpaper: '/home/quan/wallpapers/day/kurzgesagt-nuclear'
+wallpaper: ${cmd pwd}/img/nuclear-wallpaper.png
 
 color:$ color ${.base}
   dark:$ color L-0.1 ${dep base}
@@ -11,8 +11,8 @@ fg:$ clone color
   bold:$ color L-0.1 ${..}
 
 bg:$ clone color
-  base: #a8faff
-  alpha: 0.9
+  base: #99ffff
+  alpha: 1
 
 cursor:$ fg
   bg:$ color L+0.1 ${..}
@@ -36,7 +36,7 @@ black:$ clone color
   base: #1c1c1c
 
 white:$ clone color
-  base: #eeeeee
+  base: #ffffff
 
 red:$ clone color
   base:$ color cielch c-0.1 #b24144
@@ -64,6 +64,6 @@ yzb:
   fg2:$ red.lighter
 
 neofetch:
-  icon: ${env HOME}/nuclear-icon.png
+  icon: ${cmd pwd}/img/nuclear-icon.png
   colors: 6 6 4 4
   yoffset: 2
