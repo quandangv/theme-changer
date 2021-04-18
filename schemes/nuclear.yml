@@ -6,15 +6,18 @@ color:$ color ${.base}
   light:$ color L+0.1 ${dep base}
   lighter:$ color L+0.2 ${dep base}
 
-fg: #320885
+fg:$ clone color
+  base: #320885
   bold:$ color L-0.1 ${..}
 
-bg: rgba(186,250,255,0.8)
+bg:$ clone color
+  base: #a8faff
+  alpha: 0.9
 
 cursor:$ fg
   bg:$ color L+0.1 ${..}
   fg:$ color L+0.4 ${dep bg}
-  sec:$ teal
+  sec:$ cyan
     bg:$ color L-0.1 ${..}
     fg:$ color L+0.4 ${dep bg}
 
@@ -24,10 +27,16 @@ accent:$ clone color
 sel: 
   pri: 
     bg:$ blue.light
-    fg:$ color L=0.15 ${dep bg}
+    fg:$ color L=0.1 ${dep bg}
   sec: a
-    bg:$ teal.light
-    fg:$ color L=0.15 ${dep bg}
+    bg:$ cyan.light
+    fg:$ color L=0.1 ${dep bg}
+
+black:$ clone color
+  base: #1c1c1c
+
+white:$ clone color
+  base: #eeeeee
 
 red:$ clone color
   base:$ color cielch c-0.1 #b24144
@@ -41,15 +50,20 @@ yellow:$ clone color
 blue:$ clone color
   base:$ color cielch "L-0.15 C+0.2" #4898e8
 
-purple:$ clone color
+magenta:$ clone color
   base: #7744BB
 
-teal:$ clone color
+cyan:$ clone color
   base: #007777
 
 border: 0
 
 yzb:
   bg:$ red.light
-  bg2:$ teal.dark
-  fg2:$ red
+  bg2:$ cyan.dark
+  fg2:$ red.lighter
+
+neofetch:
+  icon: ${env HOME}/nuclear-icon.png
+  colors: 6 6 4 4
+  yoffset: 2

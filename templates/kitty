@@ -1,0 +1,29 @@
+font_family      Source Code Pro SemiBold
+bold_font        Source Code Pro Black
+italic_font      Source Code Pro SemiBold Italic
+bold_italic_font Source Code Pro Black Italic
+
+allow_remote_control yes
+cursor ${cursor.bg}
+cursor_text_color ${cursor.fg}
+foreground ${fg}
+background ${bg}
+background_opacity ${bg.alpha}
+selection_foreground ${sel.pri.fg}
+selection_background ${sel.pri.bg}
+color0 ${black}
+color8 ${black.light}
+color1 ${red.dark}
+color9 ${red}
+color2 ${green.dark}
+color10 ${green}
+color3 ${yellow.dark}
+color11 ${yellow}
+color4 ${blue.dark}
+color12 ${blue}
+color5 ${magenta.dark}
+color13 ${magenta}
+color6 ${cyan.dark}
+color14 ${cyan}
+color7  ${white.dark}
+color15 ${white}

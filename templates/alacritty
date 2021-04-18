@@ -1,0 +1,48 @@
+colors:
+  # Default colors
+  primary:
+    background: '${bg}'
+    foreground: '${fg}'
+
+    dim_foreground:    '${fg.dark}'
+    bright_foreground: '${fg.light}'
+    dim_background:    '${bg.dark}' # not sure
+    bright_background: '${bg.light}' # not sure
+
+  # Cursor colors
+  cursor:
+    text:   '${cursor.fg}'
+    cursor: '${cursor.bg}'
+
+  # Normal colors
+  normal:
+    black:   '${black}'
+    red:     '${red}'
+    green:   '${green}'
+    yellow:  '${yellow}'
+    blue:    '${blue}'
+    magenta: '${magenta}'
+    cyan:    '${cyan}'
+    white:   '${white}'
+
+  # Bright colors
+  bright:
+    black:   '${black.light}'
+    red:     '${red.light}'
+    green:   '${green.light}'
+    yellow:  '${yellow.light}'
+    blue:    '${blue.light}'
+    magenta: '${magenta.light}'
+    cyan:    '${cyan.light}'
+    white:   '${white.light}'
+
+  # Dim colors
+  dim:
+    black:   '${black.dark}'
+    red:     '${red.dark}'
+    green:   '${green.dark}'
+    yellow:  '${yellow.dark}'
+    blue:    '${blue.dark}'
+    magenta: '${magenta.dark}'
+    cyan:    '${cyan.dark}'
+    white:   '${white.dark}'

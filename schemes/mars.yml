@@ -6,10 +6,13 @@ color:$ color ${.base}
   light:$ color L+0.1 ${dep base}
   lighter:$ color L+0.2 ${dep base}
 
-fg: #553322
-  bold: #553322
+fg:$ clone color
+  base: #553322
+  bold:$ color L-0.1 ${..}
 
-bg: rgba(234,199,118,0.8)
+bg:$ clone color
+  base: #eecc72
+  alpha: 0.9
 
 cursor:$ .bg
   bg: #773322
@@ -23,11 +26,17 @@ accent:$ clone color
 
 sel: 
   pri: 
-    bg:$ teal
+    bg:$ accent.light
     fg:$ color L=0.15 ${dep bg}
   sec: a
-    bg:$ purple
+    bg:$ cyan
     fg:$ color L=0.15 ${dep bg}
+
+black:$ clone color
+  base: #1c1c1c
+
+white:$ clone color
+  base: #eeeeee
 
 red:$ clone color
   base: #ff3d3d
@@ -41,15 +50,20 @@ yellow:$ clone color
 blue:$ clone color
   base: #4444CC
 
-purple:$ clone color
-  base: #8b289d
+magenta:$ clone color
+  base: #9944AA
 
-teal:$ clone color
+cyan:$ clone color
   base: #009999
 
 border: 0
 
 yzb:
   bg:$ yellow.light
-  bg2:$ purple.darker
+  bg2:$ magenta.darker
   fg2:$ yellow.lighter
+
+neofetch:
+  icon: ${env HOME}/mars-icon.png
+  colors: 3 3 1 1
+  yoffset: 2

@@ -35,8 +35,8 @@ face global keyword rgb:${accent.dark:1},default+bi
 face global attribute rgb:${accent.darker:1},default+i
 
 face global operator rgb:${accent.dark:1},default
-face global comment rgb:${teal.dark:1},default+i
-face global meta rgb:${teal:1},default
+face global comment rgb:${cyan.dark:1},default+i
+face global meta rgb:${cyan:1},default
 
 face global identifier rgb:888888,default
 face global error default,rgb:ff7c5c
