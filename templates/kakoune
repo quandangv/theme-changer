@@ -30,9 +30,9 @@ face global Prompt rgb:ffffff,default+b
 face global value rgb:${green.dark:1},default 
 face global string rgb:${green:1},default
 
-face global type rgb:${accent.darker:1},default+i
-face global keyword rgb:${accent.dark:1},default+bi
-face global attribute rgb:${accent.darker:1},default+i
+face global type rgb:${kakoune.keyword.dark:1},default+i
+face global keyword rgb:${kakoune.keyword:1},default+bi
+face global attribute rgb:${kakoune.keyword.dark:1},default+i
 
 face global operator rgb:${accent.dark:1},default
 face global comment rgb:${cyan.dark:1},default+i
@@ -43,8 +43,8 @@ face global error default,rgb:ff7c5c
 
 # text
 
-face global title rgb:ffffff,default+b
-face global header rgb:ffffff,default
+face global title rgb:${kakoune.keyword:1},default+b
+face global header rgb:${kakoune.keyword:1},default
 face global bold rgb:ffffff,default+b
 face global italic rgb:ffffff,default+i
 face global mono rgb:000000,default

@@ -2,17 +2,17 @@ wallpaper: ${cmd pwd}/img/nuclear-wallpaper.png
 
 color:$ color ${.base}
   dark:$ color L-0.1 ${dep base}
-  darker:$ color cielch "L-0.2 C-0.2" ${dep base}
+  darker:$ color cielch "L-0.25" ${dep base}
   light:$ color L+0.1 ${dep base}
   lighter:$ color L+0.2 ${dep base}
 
 fg:$ clone color
-  base: #320885
+  base: #334485
   bold:$ color L-0.1 ${..}
 
 bg:$ clone color
-  base: #99ffff
-  alpha: 1
+  base: #b4eeff
+  alpha: 0.9
 
 cursor:$ fg
   bg:$ color L+0.1 ${..}
@@ -39,13 +39,13 @@ white:$ clone color
   base: #ffffff
 
 red:$ clone color
-  base:$ color cielch c-0.1 #b24144
+  base:$ color cielch "C-0.1 L+0.05" #b24144
 
 green:$ clone color
-  base:$ color L-0.2 #60b719
+  base: #339900
 
 yellow:$ clone color
-  base: #887722
+  base: #ff9900
 
 blue:$ clone color
   base:$ color cielch "L-0.15 C+0.2" #4898e8
@@ -54,16 +54,20 @@ magenta:$ clone color
   base: #7744BB
 
 cyan:$ clone color
-  base: #007777
+  base: #0099aa
 
 border: 0
 
 yzb:
-  bg:$ red.light
-  bg2:$ cyan.dark
-  fg2:$ red.lighter
+  bg:$ red
+  bg2:$ cyan.darker
+  fg2:$ red.light
 
 neofetch:
   icon: ${cmd pwd}/img/nuclear-icon.png
-  colors: 6 6 4 4
+  colors: 6 6 2 2
   yoffset: 2
+
+kakoune:
+  keyword:$ yellow
+    dark:$ green
