@@ -1,52 +1,6 @@
-fg: #FFF
-fg2: ${yzb.fg2}
-light-fg:$ color L-0.4 \${fg}
-bg: ${yzb.bg}
-bar-bg: ${yzb.bg2}
-separator: "%{B${bar-bg} O10}"
-
-yuzubar: "%{F\${fg} U${fg2}}${.left} %{c} ${.wm} %{r} ${.wifi} ${.volume} ${.status} %{B${bar-bg}}"
-
-  warn_module:H ${separator}${.format} ${.text}
-    level:$i cache 5 ${smooth 0.3 ${map 1 30 ${.raw}}}
-    background:$ gradient "0:${.norm} 30:${.warn}" ${dep level}
-      norm:$ bg
-      warn: #ea4d46
-    foreground:$ gradient "0:${.norm} 30:${.warn}" ${dep level}
-      norm:$ fg
-      warn: #FFF
-    format:$ arrcache 31 ${dep level} "%{B${dep background} F${dep foreground}}"
-
-  simple_module:H$ clone warn_module
-    percentage:L$ cache ${dep cache_time} ${dep calculation}
-    cache_time:$ var 1000
-
-  left:$ refcache "${.raw.mode}${.greeting.datetime.mode}" 20000 "${separator}${.raw}${separator}"
-    raw:$ save ${.mode} ${cmd "./scripts/options.sh ${} ${.mode} ${dep greeting}" ? N/A}
-      mode:$ var closed
-    greeting:$ refcache ${.datetime.mode} 10000 ${.raw}
-      raw: Hi %{T2}${env USER}%{T-}, ${dep datetime}
-      datetime:$ save mode ${cmd "./scripts/date.sh ${} ${.mode} ${.stonks}" ? N/A}
-        stonks:$ save cache ${poll "./scripts/stonks.sh ${.name}" ? ${.cache}}
-          name: GME
-
-  wm:$ cache 200 '%{B\${bg} F#FFF U${fg2}} ${.raw} %{B${bar-bg}}'
-    raw:$ save cache ${poll './scripts/bspwm.sh "%{T2 B${fg2}}" "%{T- B${bg}}"' ? ${.cache}}
-
-  wifi: ${separator}%{F\${fg}} ${.raw}
-    raw:$ save cache ${poll "./scripts/wifi.sh 4 %{F${light-fg}}" ? ${.cache}}
-
-  volume: ${separator}%{F\${fg}} ${.raw}
-    raw:$ save cache ${poll "./scripts/volume.sh 10 %{F${light-fg}}" ? ${.cache}}
-
-  status:$ clone warn_module
-    text:$ save ${sibling state} ${save poll.cache ${.poll}} ;
-      poll:$ poll './scripts/performance.sh "${}" "${.reload_time}" "${.bat_type}" "${.thermal_zone}"'  ? ${.cache}
-        reload_time: 2
-        # Find the right battery by running `ls /sys/class/power_supply`
-        bat_type: BAT1
-        # Find the right thermal zone by running `ls /sys/class/thermal | grep thermal_zone`
-        thermal_zone: thermal_zone0
-        # Disabling battery/temperature: follow the instructions in script/performance.sh
-    state:$ var 0
-    level.raw: ${sibling state}
+fg:= #FFF
+fg2:= ${yzb.fg2}
+#light-fg:$ color L-0.4 \${fg}
+bg:= ${yzb.bg}
+bar-bg:= ${yzb.bg2}
+#separator: "%{B${bar-bg} O10}"
