@@ -1,3 +1,4 @@
+cd $(dirname $0)
 config_termite="templates/termite  ~/.config/termite/config"
 config_kitty="templates/kitty  ~/.config/kitty/kitty.conf"
 config_alacritty="templates/alacritty ~/.config/alacritty/alacritty.yml"
@@ -16,14 +17,14 @@ eval $cmd
 kitty @ --to unix:/tmp/kitty-color set-colors --all ~/.config/kitty/kitty.conf
 kitty @ --to unix:/tmp/kitty-color set-background-opacity --all `cat ~/.config/kitty/kitty.conf | grep ^background_opacity | awk  '{print $2}'`
 
-# Reload yuzubar
-pkill --signal USR1 yuzubar
+# Reload fehbg
+~/.fehbg
 
 # Reload bspwm
 bspc wm -r
 
-# Reload fehbg
-~/.fehbg
+# Reload yuzubar
+pkill --signal USR1 yuzubar
 
 # Reload kakoune
 while IFS= read -r line; do
