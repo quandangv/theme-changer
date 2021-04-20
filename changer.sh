@@ -1,34 +1,50 @@
 cd $(dirname $0)
-config_termite="templates/termite  ~/.config/termite/config"
-config_kitty="templates/kitty  ~/.config/kitty/kitty.conf"
-config_alacritty="templates/alacritty ~/.config/alacritty/alacritty.yml"
-config_kakoune="templates/kakoune  ~/.config/kak/colors/default.kak"
-config_bspwm="templates/bspwm      ~/.config/kak/bspwmrc"
-config_yuzubar="templates/yuzubar  ~/.config/yuzubar/default.yzb"
-config_fehbg="templates/fehbg      ~/.fehbg"
-config_neofetch="templates/neofetch ~/.config/neofetch/config.conf"
 
-cmd="linkt_replace -i \"$1\" $config_kitty $config_neofetch $config_kakoune $config_bspwm $config_fehbg $config_yuzubar"
-echo $cmd
-eval $cmd
+config_cmd="linkt_replace -i \"$1\" "
+reload_cmd=""
 
-# Reload kitty
-# kitty must have been started using `kitty -o allow_remote_control=yes --listen-on unix:/tmp/kitty-color` for this to work
-kitty @ --to unix:/tmp/kitty-color set-colors --all ~/.config/kitty/kitty.conf
-kitty @ --to unix:/tmp/kitty-color set-background-opacity --all `cat ~/.config/kitty/kitty.conf | grep ^background_opacity | awk  '{print $2}'`
+# kitty
+config_cmd+="templates/kitty ~/.config/kitty/kitty.conf "
+reload_cmd+="
+  kitty @ --to unix:/tmp/kitty-color set-colors --all ~/.config/kitty/kitty.conf;
+  kitty @ --to unix:/tmp/kitty-color set-background-opacity --all `cat ~/.config/kitty/kitty.conf | grep ^background_opacity | awk  '{print $2}'`;
+"
 
-# Reload fehbg
-~/.fehbg
+# bspwm
+config_cmd+="templates/bspwm ~/.config/kak/bspwmrc "
+reload_cmd+="bspc wm -r;"
 
-# Reload bspwm
-bspc wm -r
+# fehbg
+config_cmd+="templates/fehbg ~/.fehbg "
+reload_cmd+="~/.fehbg;"
 
-# Reload yuzubar
-pkill --signal USR1 yuzubar
+# yuzubar
+config_cmd+="templates/yuzubar ~/.config/yuzubar/default.yzb "
+reload_cmd+="pkill --signal USR1 yuzubar;"
 
-# Reload kakoune
+# kakoune
+config_cmd+="templates/kakoune ~/.config/kak/colors/default.kak "
+reload_cmd+='
 while IFS= read -r line; do
   if [[ "$line" != *"(dead)"* ]]; then
-    echo colorscheme default | kak -p $line
-  fi
-done < <(kak -l)
+    echo colorscheme default | kak -p $line;
+  fi;
+done < <(kak -l);
+'
+
+# neofetch
+config_cmd+="templates/neofetch ~/.config/neofetch/config.conf "
+
+# termite
+#config_cmd+="templates/termite  ~/.config/termite/config "
+#reload_cmd+="pkill --signal USR1 termite;"
+
+# alacritty
+#config_cmd+="templates/alacritty ~/.config/alacritty/alacritty.yml"
+
+echo Configuration command: $config_cmd
+eval $config_cmd
+
+echo Reload command: $reload_cmd
+eval $reload_cmd
+
