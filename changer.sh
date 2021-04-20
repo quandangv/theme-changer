@@ -8,7 +8,7 @@ config_yuzubar="templates/yuzubar  ~/.config/yuzubar/default.yzb"
 config_fehbg="templates/fehbg      ~/.fehbg"
 config_neofetch="templates/neofetch ~/.config/neofetch/config.conf"
 
-cmd="linked_replace -i \"$1\" $config_kitty $config_neofetch $config_kakoune $config_bspwm $config_fehbg $config_yuzubar"
+cmd="linkt_replace -i \"$1\" $config_kitty $config_neofetch $config_kakoune $config_bspwm $config_fehbg $config_yuzubar"
 echo $cmd
 eval $cmd
 
