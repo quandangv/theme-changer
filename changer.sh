@@ -3,6 +3,8 @@ cd $(dirname $0)
 config_cmd="linkt_replace -i \"$1\" "
 reload_cmd=""
 
+# Comment out the tools you don't use and uncomment the tools you use
+
 # kitty
 config_cmd+="templates/kitty ~/.config/kitty/kitty.conf "
 reload_cmd+="
