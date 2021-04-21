@@ -1,4 +1,9 @@
 # theme-changer - Re-theme your desktop at a whim!
+<p align="center">
+  <img src="previews/mars-theme.png" width="49%" alt="Themes using yuzubar">
+  <img src="previews/nuclear-theme.png" width="49%" alt="Themes using yuzubar">
+</p>
+
 Sure, your current Linux theme is great! But everything get old after a while, don't they?
 
 Theme-changer will help you change the configuration of your WM, Compositor, Terminal, Text Editor, and more, within just one execution of a script.
