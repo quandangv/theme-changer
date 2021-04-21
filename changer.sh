@@ -20,6 +20,10 @@ reload_cmd+="bspc wm -r;"
 config_cmd+="templates/fehbg ~/.fehbg "
 reload_cmd+="~/.fehbg;"
 
+# nitrogen
+#config_cmd+="templates/nitrogen ~/.config/nitrogen/bg-saved.cfg "
+#reload_cmd+="nitrogen --restore;"
+
 # yuzubar
 config_cmd+="templates/yuzubar ~/.config/yuzubar/default.yzb "
 reload_cmd+="pkill --signal USR1 yuzubar;"
