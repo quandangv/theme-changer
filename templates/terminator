@@ -1,0 +1,21 @@
+[global_config]
+  focus = system
+[keybindings]
+[profiles]
+  [[default]]
+    palette = "${black}:${red.dark}:${green.dark}:${yellow.dark}:${blue.dark}:${magenta.dark}:${cyan.dark}:${white.dark}:${black.light}:${red}:${green}:${yellow}:${blue}:${magenta}:${cyan}:${white}"
+    foreground_color = "${fg}"
+    background_color = "${bg}"
+    cursor_color = "${cursor.bg}"
+
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
+

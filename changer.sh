@@ -6,6 +6,10 @@ change_list=""
 
 # Comment out the tools you don't use and uncomment the tools you use
 
+# terminator
+change_list+="terminator "
+config_cmd+="templates/terminator  ~/.config/terminator/config "
+
 # kitty
 change_list+="kitty "
 config_cmd+="templates/kitty ~/.config/kitty/kitty.conf "
@@ -62,6 +66,7 @@ if [ ! -f ./confirmed ]; then
   echo This will replace the configurations of these application: $change_list
   read -r -p "$(echo "Are you sure? [y/N]: ")" -n 1 p && echo
   [[ "${p^^}" != "Y" ]] && exit 1
+  touch ./confirmed
 fi
 
 echo Configuration command: $config_cmd
