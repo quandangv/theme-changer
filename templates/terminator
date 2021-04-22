@@ -7,6 +7,8 @@
     foreground_color = "${fg}"
     background_color = "${bg}"
     cursor_color = "${cursor.bg}"
+    background_darkness = ${bg.alpha}
+    background_type = transparent
 
 [layouts]
   [[default]]
