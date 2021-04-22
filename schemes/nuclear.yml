@@ -35,9 +35,6 @@ sel:
 black:$ clone color
   base: #1c1c1c
 
-white:$ clone color
-  base: #ffffff
-
 red:$ clone color
   base:$ color cielch "C-0.1 L+0.05" #b24144
 
@@ -55,6 +52,9 @@ magenta:$ clone color
 
 cyan:$ clone color
   base: #0099aa
+
+white:$ clone color
+  base: #ffffff
 
 border: 0
 
